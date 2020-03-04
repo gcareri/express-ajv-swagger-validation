@@ -33,9 +33,9 @@ export interface ErrorDetails {
 }
 
 export const enum frameworks {
-    koa,
-    express,
-    moleculer
+    koa = "koa",
+    express = "express",
+    moleculer = "moleculer"
 }
 
 export interface format {
@@ -54,6 +54,7 @@ export interface ajvValidatorOptions {
     formats?: Array<format>;
     keywords?: any;
     makeOptionalAttributesNullable?: boolean;
+    errorFormatter: any;
 }
 
 export interface inputValidationOptions {
