@@ -11,7 +11,7 @@ class InputValidationError extends Error {
         if (options.beautifyErrors && options.firstError) {
             super(parseAjvError(errors[0]));
         } else if (options.beautifyErrors) {
-            super(parseAjvError(errors));
+            super(parseAjvErrors(errors));
         } else {
             super(errors);
         }
